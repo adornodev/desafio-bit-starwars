@@ -12,7 +12,7 @@ def create_app():
 
     init_mongo(app)
     register_controllers(app)
-    
+
     return app
 
 def init_mongo(app):
