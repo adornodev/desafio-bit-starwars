@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  database:
+    image: mongo:latest
+    container_name: "bitsw_mongo"
+    restart: "always"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "bitsw"
+      MONGO_INITDB_ROOT_PASSWORD: "bitsw123"
+      MONGO_INITDB_DATABASE: "BitSW"
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    ports:
+      - "37017:27017"
