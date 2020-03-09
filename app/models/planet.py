@@ -15,9 +15,9 @@ class Planet(BaseModel):
         result['name'] = self.name
         result['climate'] = self.climate
         result['terrain'] = self.terrain
-        result['created_at'] = self.created_at #str(self.created_at)
-        result['updated_at'] = self.updated_at #str(self.updated_at)
-        result['_id'] = self._id #str(self._id)
+        result['created_at'] = self.created_at
+        result['updated_at'] = self.updated_at
+        result['_id'] = self._id
 
         return result
     

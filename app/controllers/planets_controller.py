@@ -10,6 +10,10 @@ def index():
   page = int(request.args.get('page', 1))
   page_size = int(request.args.get('page_size', 5))
 
+  page = 1 if page < 1 else page
+  page_size = 5 if page_size < 5 else page_size
+  
+  # Find planets on db
   planets_db = list(mongo.db.planets.find({}, projection=Planet.remove_invisible_fields(ignore_id=False)).sort([('created_at', -1)]).skip((page-1) * page_size).limit(page_size))
 
   return send_response(Response(True, data=planets_db))
@@ -34,6 +38,7 @@ def show(planet_id):
     return send_response(Response(True, data=planet_on_db))
 
 def insert():
+
   payload = request.get_json(force=True)
 
   # Initialize a Planet object
@@ -46,6 +51,7 @@ def insert():
 
 
 def destroy():
+  
   payload = request.get_json(force=True)
 
   # Build query
