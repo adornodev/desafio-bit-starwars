@@ -42,4 +42,9 @@ docker-compose down
 
 ## Exemplos de uso
 
+Caso tenha o **[Insomnia][insomnia]** instalado, clique no botão abaixo para carregar todos os exemplos possíveis de requests
+
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=BitSW&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fadornodev%2Fdesafio-bit-starwars%2Fmaster%2F.github%2Finsomnia_workspace.json)
+
 [swapi]: https://swapi.co/
+[insomnia]: https://insomnia.rest/
