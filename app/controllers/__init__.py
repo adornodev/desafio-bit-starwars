@@ -10,5 +10,5 @@ from app.controllers.planets_controller import insert as planets_insert
 planet_blueprints = Blueprint('planets', 'api', url_prefix='/planets')
 planet_blueprints.add_url_rule('/<planet_id>', view_func=planets_show, methods=['GET'])
 planet_blueprints.add_url_rule('/', view_func=planets_index, methods=['GET'])
-planet_blueprints.add_url_rule('/', view_func=planets_destroy, methods=['DELETE'])
+planet_blueprints.add_url_rule('/<planet_id>', view_func=planets_destroy, methods=['DELETE'])
 planet_blueprints.add_url_rule('/', view_func=planets_insert, methods=['POST'])

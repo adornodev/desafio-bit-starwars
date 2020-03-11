@@ -70,19 +70,15 @@ def insert():
   return send_response(Response(res.acknowledged))
 
 
-def destroy():
-  payload = request.get_json(force=True)
-
+def destroy(planet_id):
   # Build query
   query = None
-  if 'name' in payload:
-    query = {'name': payload['name']}
-  elif 'swapi_id' in payload:
-    query = {'swapi_id': int(payload['swapi_id'])}
-  elif '_id' in payload:
-    query = {'_id': ObjectId(str(payload['id']))}
+  if planet_id.isdigit():
+    query = {'swapi_id': int(planet_id)}
+  elif ObjectId.is_valid(planet_id):
+    query = {'_id': ObjectId(str(planet_id))}
   else:
-    return send_response(Response(False, "It's necessary to provider \"_id\", \"swapi_id\" or \"name\" field to remove planet from database" ))
+    query = {'name': planet_id}
 
   # Delete from database
   resp = mongo.db.planets.delete_many(query)
