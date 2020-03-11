@@ -25,18 +25,26 @@ https://github.com/adornodev/desafio-bit-starwars.git
 
 Com o repositório clonado, na raiz principal do projeto há um arquivo chamado _requirements_txt_. Nele consta todas as dependências necessárias para a execução do projeto.
 
-Para iniciar a aplicação junto ao banco de dados, execute o comando:
+Para iniciar a aplicação junto ao banco de dados pela primeira vez execute o comando:
+
+```docker
+docker-compose build
+```
+
+Após ter realizado o build da imagem, basta
 
 ```docker
 docker-compose up -d
 ```
 
-Para interromper a execução, execute
+para iniciar a aplicação e
 
 ```docker
 docker-compose stop
 ```
 
+para interromper a execução.
+<br><br><br>
 Pronto, a **aplicação** está exposta localmente na **porta 5000**!
 
 ---
