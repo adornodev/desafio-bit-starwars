@@ -8,7 +8,12 @@ A aplicação desenvolvida utiliza Flask como framework web e MongoDB como banco
   <img src=".github/header.png">
 </p>
 
----
+## Dependências
+
+Para rodar a aplicação, a máquina deve possui as seguintes ferramentas:
+
+- **[docker][docker]**
+- **[docker-compose][docker-compose]**
 
 ## Como rodar?
 
@@ -20,22 +25,16 @@ https://github.com/adornodev/desafio-bit-starwars.git
 
 Com o repositório clonado, na raiz principal do projeto há um arquivo chamado _requirements_txt_. Nele consta todas as dependências necessárias para a execução do projeto.
 
-Para instalar as dependências, no mesmo diretório que encontra este arquivo, rode o comando:
-
-```sh
-pip install -r requirements_txt
-```
-
-Após a instalação dos packages, para iniciar a aplicação em conjunto ao banco de dados, execute o comando:
+Para iniciar a aplicação junto ao banco de dados, execute o comando:
 
 ```docker
-docker-compose up
+docker-compose up -d
 ```
 
 Para interromper a execução, execute
 
 ```docker
-docker-compose down
+docker-compose stop
 ```
 
 ---
@@ -57,3 +56,5 @@ Caso tenha o **[Insomnia][insomnia]** instalado, clique no botão abaixo para ca
 
 [swapi]: https://swapi.co/
 [insomnia]: https://insomnia.rest/
+[docker]: https://www.docker.com/products/docker-desktop
+[docker-compose]: https://docs.docker.com/compose/install/
