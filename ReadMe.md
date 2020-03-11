@@ -15,6 +15,20 @@ Para rodar a aplicação, a máquina deve possuir as seguintes ferramentas:
 - **[docker][docker]**
 - **[docker-compose][docker-compose]**
 
+## Packages
+
+Os seguintes pacotes foram utilizados para a construção da aplicação Flask containerizada:
+
+```
+docker==4.2.0
+docker-compose==1.25.4
+Flask==1.1.1
+Flask-PyMongo==2.3.0
+pymongo==3.10.1
+```
+
+---
+
 ## Como rodar?
 
 Primeiramente deve clonar o repositório em seu computador:
