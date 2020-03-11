@@ -10,7 +10,7 @@ A aplicação desenvolvida utiliza Flask como framework web e MongoDB como banco
 
 ## Dependências
 
-Para rodar a aplicação, a máquina deve possui as seguintes ferramentas:
+Para rodar a aplicação, a máquina deve possuir as seguintes ferramentas:
 
 - **[docker][docker]**
 - **[docker-compose][docker-compose]**
@@ -36,6 +36,8 @@ Para interromper a execução, execute
 ```docker
 docker-compose stop
 ```
+
+Pronto, a **aplicação** está exposta localmente na **porta 5000**!
 
 ---
 
