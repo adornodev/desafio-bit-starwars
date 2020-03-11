@@ -1,20 +1,16 @@
 version: "3.7"
 
 services:
-  web:
+  api:
     build: .
-    command: flask run
     container_name: "bitsw_api"
     ports:
       - "5000:5000"
-    volumes:
-      - .:/bit_api
     environment:
       FLASK_ENV: "development"
       FLASK_APP: "app.py"
-    links:
+    depends_on:
       - database
-
   database:
     image: mongo:latest
     container_name: "bitsw_mongo"
